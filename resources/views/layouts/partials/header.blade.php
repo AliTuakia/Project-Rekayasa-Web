@@ -3,6 +3,7 @@
     <nav>
         <a href="{{ url('/') }}" style="color: #fff; text-decoration: none; margin-left: 1.5rem; font-size: 0.95rem;">Home</a>
         <a href="{{ url('/profile') }}" style="color: #fff; text-decoration: none; margin-left: 1.5rem; font-size: 0.95rem;">Profile</a>
+        <a href="{{ url('/project') }}" style="color: #fff; text-decoration: none; margin-left: 1.5rem; font-size: 0.95rem;">Project</a>
         <a href="{{ url('/about') }}" style="color: #fff; text-decoration: none; margin-left: 1.5rem; font-size: 0.95rem;">About</a>
     </nav>
 </div>
