@@ -5,5 +5,6 @@
         <a href="{{ url('/profile') }}" style="color: #fff; text-decoration: none; margin-left: 1.5rem; font-size: 0.95rem;">Profile</a>
         <a href="{{ url('/project') }}" style="color: #fff; text-decoration: none; margin-left: 1.5rem; font-size: 0.95rem;">Project</a>
         <a href="{{ url('/about') }}" style="color: #fff; text-decoration: none; margin-left: 1.5rem; font-size: 0.95rem;">About</a>
+        <a href="{{ url('/admin') }}" style="color: #fff; text-decoration: none; margin-left: 1.5rem; font-size: 0.95rem;">Admin</a>
     </nav>
 </div>
