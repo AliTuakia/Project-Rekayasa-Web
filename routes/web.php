@@ -1,8 +1,8 @@
 <?php
-
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminProjectController;
 
 Route::get('/', function () {
     return view('page.home');
@@ -18,7 +18,8 @@ Route::get('/about', function () {
 });
 
 Route::prefix('admin')->name('admin.')->group(function () {
-    route::get('/', function () {
-        return  view('admin.home');
+    Route::get('/', function () {
+        return view('admin.home');
     })->name('home');
+    Route::resource('project', AdminProjectController::class);
 });

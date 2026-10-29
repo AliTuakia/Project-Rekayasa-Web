@@ -62,7 +62,7 @@ body {
                 <a class="nav-link text-white" href="{{ route('admin.home') }}">Dashboard</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="#">Project</a>
+                <a class="nav-link text-white" href="{{ route('admin.project.index') }}">Project</a>
             </li>
         </ul>
     </div>
@@ -72,6 +72,12 @@ body {
             <h3 class="fw-bold mb-0">Dashboard</h3>
             <span class="text-muted fw-semibold">Halo, Administrator</span>
         </div>
+        @if (session('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        @endif
         @yield('content')
     </div>
     @stack('scripts')
