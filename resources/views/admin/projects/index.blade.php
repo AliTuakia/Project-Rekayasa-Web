@@ -7,6 +7,11 @@
             <div class="card-body">
         <div class="d-flex justify-content-between align-items-center card-header">
             <h5 class="card-title mb-0">Data Project</h5>
+            <div class="d-flex gap-2">
+                <a href="{{ route('admin.project.pdf') }}" class="btn btn-danger" target="_blank">Export PDF</a>
+                <a href="{{ route('admin.project.create') }}" class="btn btn-primary">Tambah Data</a>
+            </div>
+        </div>
             <a href="{{ route('admin.project.create') }}" class="btn btn-primary">Tambah Data</a>
         </div>
         <div class="table-responsive">
@@ -32,6 +37,7 @@
                         <td>{{ $project->teknologi}}</td>
                         <td>{{ $project->status }}</td>
                         <td>
+                            <a href="{{ route('admin.project.pdf.single', $project->id) }}" class="btn btn-sm btn-info" target="_blank">Export PDF</a>
                             <a href="{{ route('admin.project.edit', $project->id) }}" class="btn btn-sm btn-warning">Edit</a>
                             <form action="{{ route('admin.project.destroy', $project->id) }}" method="POST" class="d-inline">
                             <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</button>
